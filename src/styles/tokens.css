@@ -11,12 +11,103 @@
     --accent: #d6b680;
     --accent-deep: #7f6842;
     --shadow: 0 24px 70px rgba(0, 0, 0, 0.35);
+    --page-radial: rgba(125, 95, 54, 0.2);
+    --page-grad-start: #0e0b09;
+    --page-grad-mid: #15110e;
+    --page-grad-end: #100d0b;
+    --grid-line: rgba(255, 255, 255, 0.015);
+    --shell-border: rgba(214, 182, 128, 0.16);
+    --shell-bg-start: rgba(21, 17, 14, 0.96);
+    --shell-bg-end: rgba(17, 14, 12, 0.92);
+    --header-overlay-start: rgba(13, 10, 8, 0.72);
+    --header-overlay-end: rgba(13, 10, 8, 0.86);
+    --header-overlay-article-start: rgba(12, 10, 8, 0.48);
+    --header-overlay-article-end: rgba(12, 10, 8, 0.86);
+    --header-column-border: rgba(214, 182, 128, 0.14);
+    --ornament-strong: rgba(214, 182, 128, 0.28);
+    --ornament-soft: rgba(214, 182, 128, 0.08);
+    --ornament-mid: rgba(214, 182, 128, 0.22);
+    --hero-ornament-dot: rgba(214, 182, 128, 0.36);
+    --hero-ornament-line: rgba(214, 182, 128, 0.15);
+    --hero-ornament-bar: rgba(214, 182, 128, 0.25);
+    --hero-ornament-border: rgba(214, 182, 128, 0.12);
+    --mark-bg: rgba(16, 13, 11, 0.72);
+    --card-bg-start: rgba(31, 25, 21, 0.88);
+    --card-bg-end: rgba(18, 15, 13, 0.92);
+    --card-inner-border: rgba(214, 182, 128, 0.08);
+    --card-hover-shadow: 0 22px 40px rgba(0, 0, 0, 0.22);
+    --blockquote-bg: rgba(214, 182, 128, 0.06);
+    --inline-code-border: rgba(214, 182, 128, 0.25);
+    --inline-code-bg: rgba(214, 182, 128, 0.08);
+    --code-block-border: rgba(214, 182, 128, 0.22);
+    --code-block-bg: rgba(10, 10, 12, 0.72);
+    --code-title-border: rgba(214, 182, 128, 0.2);
+    --code-title-bg: rgba(214, 182, 128, 0.08);
+    --code-line-highlight: rgba(214, 182, 128, 0.12);
+    --code-line-border: rgba(214, 182, 128, 0.68);
+    --code-char-highlight: rgba(214, 182, 128, 0.2);
+    --mermaid-bg: rgba(17, 14, 12, 0.62);
+    --mermaid-border: rgba(214, 182, 128, 0.22);
     --gutter: clamp(20px, 4vw, 56px);
     --gutter-wide: clamp(20px, 5vw, 72px);
     --reading-width: 760px;
     --hero-width: 880px;
     --hero-image:
       linear-gradient(rgba(12, 10, 8, 0.3), rgba(12, 10, 8, 0.88)),
+      url("../../assets/gustave-dore-illustration.jpg");
+  }
+
+  :root[data-theme="light"] {
+    --bg: #f7f1e4;
+    --bg-soft: #ece1cf;
+    --panel: rgba(255, 250, 241, 0.9);
+    --panel-strong: rgba(245, 236, 222, 0.94);
+    --line: rgba(133, 98, 53, 0.24);
+    --line-strong: rgba(133, 98, 53, 0.5);
+    --text: #2e2418;
+    --text-soft: #5a4a35;
+    --accent: #8b6938;
+    --accent-deep: #5b4321;
+    --shadow: 0 20px 60px rgba(82, 62, 34, 0.14);
+    --page-radial: rgba(181, 147, 99, 0.24);
+    --page-grad-start: #fbf6ee;
+    --page-grad-mid: #f4ecdf;
+    --page-grad-end: #efe3d1;
+    --grid-line: rgba(84, 68, 47, 0.06);
+    --shell-border: rgba(133, 98, 53, 0.2);
+    --shell-bg-start: rgba(252, 247, 238, 0.97);
+    --shell-bg-end: rgba(244, 236, 223, 0.94);
+    --header-overlay-start: rgba(249, 242, 232, 0.72);
+    --header-overlay-end: rgba(241, 230, 214, 0.82);
+    --header-overlay-article-start: rgba(249, 242, 232, 0.62);
+    --header-overlay-article-end: rgba(241, 230, 214, 0.8);
+    --header-column-border: rgba(133, 98, 53, 0.16);
+    --ornament-strong: rgba(133, 98, 53, 0.28);
+    --ornament-soft: rgba(133, 98, 53, 0.08);
+    --ornament-mid: rgba(133, 98, 53, 0.2);
+    --hero-ornament-dot: rgba(133, 98, 53, 0.3);
+    --hero-ornament-line: rgba(133, 98, 53, 0.14);
+    --hero-ornament-bar: rgba(133, 98, 53, 0.22);
+    --hero-ornament-border: rgba(133, 98, 53, 0.16);
+    --mark-bg: rgba(255, 251, 245, 0.88);
+    --card-bg-start: rgba(255, 251, 244, 0.92);
+    --card-bg-end: rgba(246, 236, 220, 0.95);
+    --card-inner-border: rgba(133, 98, 53, 0.12);
+    --card-hover-shadow: 0 20px 36px rgba(92, 67, 31, 0.2);
+    --blockquote-bg: rgba(139, 105, 56, 0.08);
+    --inline-code-border: rgba(133, 98, 53, 0.34);
+    --inline-code-bg: rgba(139, 105, 56, 0.1);
+    --code-block-border: rgba(133, 98, 53, 0.28);
+    --code-block-bg: rgba(255, 250, 242, 0.95);
+    --code-title-border: rgba(133, 98, 53, 0.28);
+    --code-title-bg: rgba(139, 105, 56, 0.1);
+    --code-line-highlight: rgba(139, 105, 56, 0.14);
+    --code-line-border: rgba(133, 98, 53, 0.56);
+    --code-char-highlight: rgba(139, 105, 56, 0.18);
+    --mermaid-bg: rgba(255, 250, 242, 0.94);
+    --mermaid-border: rgba(133, 98, 53, 0.26);
+    --hero-image:
+      linear-gradient(rgba(250, 242, 230, 0.38), rgba(241, 230, 214, 0.84)),
       url("../../assets/gustave-dore-illustration.jpg");
   }
 }

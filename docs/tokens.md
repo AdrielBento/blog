@@ -2,163 +2,73 @@
 
 ## Visão geral
 
-Os tokens centrais vivem em `:root` dentro de [styles.css](/home/adriel/documents/code-craft/styles.css). Eles definem a base visual do projeto e devem ser reaproveitados antes da criação de qualquer novo valor.
+A fonte da verdade de tokens está em [src/styles/tokens.css](/home/adriel/documents/code-craft/src/styles/tokens.css).  
+O projeto agora possui dois temas oficiais:
 
-## Princípios visuais
+- `:root` para `dark` (default)
+- `:root[data-theme="light"]` para `light`
 
-- fundo escuro quente, evitando preto puro
-- destaque dourado desaturado
-- superfícies densas com bordas finas
-- textura e profundidade discretas
-- leitura como prioridade visual
+O tema é controlado por `data-theme` no elemento `html`.
 
-## Cores
+## Modelo de tema
 
-| Token | Valor | Uso |
-| --- | --- | --- |
-| `--bg` | `#120f0d` | fundo base mais denso |
-| `--bg-soft` | `#191513` | superfícies escuras secundárias |
-| `--panel` | `rgba(29, 23, 19, 0.88)` | painéis translúcidos |
-| `--panel-strong` | `rgba(20, 16, 14, 0.95)` | superfícies mais opacas |
-| `--line` | `rgba(215, 194, 161, 0.24)` | bordas e divisórias sutis |
-| `--line-strong` | `rgba(215, 194, 161, 0.5)` | hover, foco e ênfase de borda |
-| `--text` | `#f1e7d5` | texto principal |
-| `--text-soft` | `#c7baa4` | texto secundário |
-| `--accent` | `#d6b680` | destaque principal |
-| `--accent-deep` | `#7f6842` | variação profunda do destaque |
+1. Tokens semânticos (`--text`, `--line`, `--panel`, etc.) não devem ser usados com valores hardcoded nos componentes.
+2. Todo novo token de cor precisa existir em dark e light.
+3. Componentes devem consumir apenas tokens semânticos, nunca hex/rgba direto.
 
-## Sombra e elevação
+## Paleta semântica base
 
-| Token | Valor | Uso |
-| --- | --- | --- |
-| `--shadow` | `0 24px 70px rgba(0, 0, 0, 0.35)` | elevação do container principal |
+| Token | Dark | Light | Uso |
+| --- | --- | --- | --- |
+| `--bg` | `#120f0d` | `#f7f1e4` | fundo base |
+| `--bg-soft` | `#191513` | `#ece1cf` | fundo secundário |
+| `--text` | `#f1e7d5` | `#2e2418` | texto principal |
+| `--text-soft` | `#c7baa4` | `#5a4a35` | texto secundário |
+| `--accent` | `#d6b680` | `#8b6938` | destaque |
+| `--accent-deep` | `#7f6842` | `#5b4321` | variação de destaque |
+| `--line` | `rgba(215, 194, 161, 0.24)` | `rgba(133, 98, 53, 0.24)` | bordas sutis |
+| `--line-strong` | `rgba(215, 194, 161, 0.5)` | `rgba(133, 98, 53, 0.5)` | hover/focus |
+| `--panel` | `rgba(29, 23, 19, 0.88)` | `rgba(255, 250, 241, 0.9)` | painéis translúcidos |
+| `--panel-strong` | `rgba(20, 16, 14, 0.95)` | `rgba(245, 236, 222, 0.94)` | painéis opacos |
 
-## Imagem editorial
+## Tokens de superfície e layout
 
-| Token | Valor | Uso |
-| --- | --- | --- |
-| `--hero-image` | overlay escuro + imagem local | background do hero e do header |
+| Grupo | Tokens |
+| --- | --- |
+| Fundo global | `--page-radial`, `--page-grad-start`, `--page-grad-mid`, `--page-grad-end`, `--grid-line` |
+| Shell | `--shell-border`, `--shell-bg-start`, `--shell-bg-end` |
+| Header/Hero | `--hero-image`, `--header-overlay-*`, `--header-column-border` |
+| Ornamentação | `--ornament-*`, `--hero-ornament-*` |
+| Cards | `--card-bg-start`, `--card-bg-end`, `--card-inner-border`, `--card-hover-shadow` |
 
-Referência:
+## Tokens de conteúdo MDX
 
-- [assets/gustave-dore-illustration.jpg](/home/adriel/documents/code-craft/assets/gustave-dore-illustration.jpg)
+| Grupo | Tokens |
+| --- | --- |
+| Blockquote | `--blockquote-bg` |
+| Inline code | `--inline-code-border`, `--inline-code-bg` |
+| Code block | `--code-block-border`, `--code-block-bg`, `--code-title-border`, `--code-title-bg` |
+| Highlight | `--code-line-highlight`, `--code-line-border`, `--code-char-highlight` |
+| Mermaid | `--mermaid-bg`, `--mermaid-border` |
 
 ## Tipografia
 
-### Famílias
+- `Cormorant Garamond`: títulos e elementos editoriais.
+- `Manrope`: corpo e elementos de interface.
+- Escalas continuam definidas em `components.css` e `prose.css`, sem divergência entre temas.
 
-- `Cormorant Garamond`: títulos, citações, chamadas editoriais
-- `Manrope`: corpo, metadados, navegação e interface
+## Espaçamento e largura
 
-### Hierarquia principal
-
-| Papel | Seletor | Escala |
-| --- | --- | --- |
-| display principal | `.hero h1` | `clamp(3rem, 7vw, 5.6rem)` |
-| título de artigo | `.article-hero h1` | `clamp(2.8rem, 6vw, 4.8rem)` |
-| seção editorial | `.manifesto-card h2`, `.section-heading h2` | `clamp(2rem, 4vw, 3rem)` |
-| heading de conteúdo | `.article-body h2` | `2.4rem` |
-| subheading de conteúdo | `.article-body h3` | `1.8rem` |
-| utility label | `.eyebrow`, `.section-kicker`, `.post-card__tag` | `0.78rem` |
-
-### Regras tipográficas
-
-- títulos usam serifada com alta presença editorial
-- corpo e UI usam sans-serif para clareza operacional
-- labels usam uppercase e tracking alto
-- evitar misturar muitos pesos ou famílias novas
-
-## Espaçamento
-
-### Larguras
-
-| Elemento | Regra |
+| Token | Valor |
 | --- | --- |
-| container principal | `width: 100%` com `min-height: 100vh` |
-| gutter padrão | `clamp(20px, 4vw, 56px)` |
-| gutter expandido | `clamp(20px, 5vw, 72px)` |
-| corpo do artigo | `max-width: 760px` |
-| hero de artigo | `max-width: 960px` |
-
-### Escala prática
-
-- `12px`: separação curta entre label e bloco
-- `18px` a `24px`: grupos internos e metadata
-- `28px` a `36px`: padding de cards e painéis
-- `clamp(20px, 4vw, 56px)`: gutter responsivo padrão
-- `42px`: respiro entre seções de artigo
-
-## Superfícies
-
-### Fundo global
-
-Composição:
-
-- gradiente radial quente
-- gradiente vertical escuro
-- grade sutil em `body::before`
-- moldura externa em `body::after`
-
-### Painéis
-
-Usam:
-
-- gradiente escuro
-- borda fina
-- moldura interna com pseudo-elemento
-
-Seletores-base:
-
-- `.manifesto-card`
-- `.quote-card`
-- `.post-card`
-- `.rail-card`
-- `.article-pagination a`
-
-## Ornamentação
-
-### Header
-
-`.site-header::before` e `.site-header::after` criam uma leitura de colunas laterais e estrutura arquitetônica.
-
-### Hero
-
-`.hero__ornament` combina filetes, linhas e marcações verticais para sugerir capitéis e molduras clássicas.
-
-### Regras
-
-- ornamentos são lineares e discretos
-- sem multicolorido
-- sem ilustrações infantis
-- devem recuar visualmente diante do conteúdo
-
-## Motion
-
-O sistema usa movimento contido:
-
-- hover/focus em links
-- hover/focus em cards
-- transições curtas
-- scroll suave
-
-## Responsividade
-
-### Até `980px`
-
-- hero colapsa para uma coluna
-- grids principais colapsam
-- ornamentos laterais do hero desaparecem
-
-### Até `720px`
-
-- padding horizontal cai para `20px`
-- header entra em fluxo vertical
-- molduras laterais decorativas do header desaparecem
+| `--gutter` | `clamp(20px, 4vw, 56px)` |
+| `--gutter-wide` | `clamp(20px, 5vw, 72px)` |
+| `--reading-width` | `760px` |
+| `--hero-width` | `880px` |
 
 ## Regras de evolução
 
-1. Reusar tokens existentes primeiro.
-2. Não introduzir cores saturadas fora da família do projeto.
-3. Preservar a dupla serifada + sans.
-4. Manter contraste alto e largura controlada para leitura.
-5. Qualquer novo token deve nascer de uma necessidade recorrente, não pontual.
+1. Novos tokens devem nascer em [src/styles/tokens.css](/home/adriel/documents/code-craft/src/styles/tokens.css).
+2. Cada token novo precisa de variante dark e light.
+3. Não adicionar cor direta em `components.css`, `layout.css` ou `prose.css`.
+4. Preferir token semântico (`--card-*`, `--code-*`) em vez de token específico de componente.

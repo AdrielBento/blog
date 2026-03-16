@@ -7,6 +7,12 @@
     padding: 22px var(--gutter-wide);
   }
 
+  .site-header__actions {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+  }
+
   .brand {
     display: inline-flex;
     align-items: center;
@@ -24,7 +30,11 @@
     font-size: 1.65rem;
     font-weight: 700;
     color: var(--accent);
-    background: rgba(16, 13, 11, 0.72);
+    background: var(--mark-bg);
+    transition:
+      color 220ms ease,
+      border-color 220ms ease,
+      background 220ms ease;
   }
 
   .brand__text {
@@ -64,6 +74,7 @@
 
   .top-nav a {
     color: var(--text-soft);
+    transition: color 180ms ease;
   }
 
   .top-nav a:hover,
@@ -162,35 +173,35 @@
     background:
       radial-gradient(
         circle at center,
-        rgba(214, 182, 128, 0.36) 0 2px,
+        var(--hero-ornament-dot) 0 2px,
         transparent 3px
       ),
       linear-gradient(
         180deg,
         transparent,
-        rgba(214, 182, 128, 0.15) 14%,
-        rgba(214, 182, 128, 0.15) 86%,
+        var(--hero-ornament-line) 14%,
+        var(--hero-ornament-line) 86%,
         transparent
       ),
       linear-gradient(
         90deg,
         transparent 24px,
-        rgba(214, 182, 128, 0.22) 24px,
-        rgba(214, 182, 128, 0.22) 26px,
+        var(--ornament-mid) 24px,
+        var(--ornament-mid) 26px,
         transparent 26px,
         transparent 46px,
-        rgba(214, 182, 128, 0.22) 46px,
-        rgba(214, 182, 128, 0.22) 48px,
+        var(--ornament-mid) 46px,
+        var(--ornament-mid) 48px,
         transparent 48px
       ),
       linear-gradient(
         180deg,
-        rgba(214, 182, 128, 0.25) 0 9px,
+        var(--hero-ornament-bar) 0 9px,
         transparent 9px calc(100% - 9px),
-        rgba(214, 182, 128, 0.25) calc(100% - 9px)
+        var(--hero-ornament-bar) calc(100% - 9px)
       );
     background-repeat: no-repeat;
-    border: 1px solid rgba(214, 182, 128, 0.12);
+    border: 1px solid var(--hero-ornament-border);
   }
 
   .manifesto-card,
@@ -201,11 +212,10 @@
     position: relative;
     padding: 28px;
     border: 1px solid var(--line);
-    background: linear-gradient(
-      180deg,
-      rgba(31, 25, 21, 0.88),
-      rgba(18, 15, 13, 0.92)
-    );
+    background: linear-gradient(180deg, var(--card-bg-start), var(--card-bg-end));
+    transition:
+      border-color 200ms ease,
+      background 240ms ease;
   }
 
   .manifesto-card::before,
@@ -215,7 +225,7 @@
   .article-pagination a::before {
     position: absolute;
     inset: 8px;
-    border: 1px solid rgba(214, 182, 128, 0.08);
+    border: 1px solid var(--card-inner-border);
     content: "";
     pointer-events: none;
   }
@@ -290,7 +300,7 @@
   .post-card:focus-visible {
     transform: translateY(-4px);
     border-color: var(--line-strong);
-    box-shadow: 0 22px 40px rgba(0, 0, 0, 0.22);
+    box-shadow: var(--card-hover-shadow);
   }
 
   .post-card h3 {
@@ -320,7 +330,11 @@
 
   .site-header--article {
     background:
-      linear-gradient(180deg, rgba(12, 10, 8, 0.48), rgba(12, 10, 8, 0.86)),
+      linear-gradient(
+        180deg,
+        var(--header-overlay-article-start),
+        var(--header-overlay-article-end)
+      ),
       var(--hero-image);
     background-position: center top;
   }
@@ -354,6 +368,36 @@
     margin-bottom: 18px;
     color: var(--text-soft);
     font-size: 0.88rem;
+    transition: color 180ms ease;
+  }
+
+  .theme-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    border: 1px solid var(--line);
+    background: var(--panel);
+    color: var(--text-soft);
+    font: inherit;
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition:
+      color 180ms ease,
+      border-color 180ms ease,
+      background 220ms ease;
+  }
+
+  .theme-toggle:hover,
+  .theme-toggle:focus-visible {
+    color: var(--text);
+    border-color: var(--line-strong);
+  }
+
+  .theme-toggle__label {
+    line-height: 1;
   }
 
   .article-pagination strong {
@@ -373,6 +417,11 @@
   }
 
   @media (max-width: 720px) {
+    .site-header__actions {
+      width: 100%;
+      justify-content: space-between;
+    }
+
     .site-header__bar {
       flex-direction: column;
       align-items: start;
@@ -388,6 +437,10 @@
     .hero,
     .article-hero {
       padding: 40px 20px 48px;
+    }
+
+    .theme-toggle__label {
+      display: none;
     }
 
     .manifesto-card,

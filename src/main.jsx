@@ -4,14 +4,17 @@ import { BrowserRouter } from "react-router-dom";
 import { MDXProvider } from "@mdx-js/react";
 import App from "./App";
 import { mdxComponents } from "./lib/mdxComponents";
+import { ThemeProvider } from "./lib/theme";
 import "./styles/index.css";
 
 createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <MDXProvider components={mdxComponents}>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
-    </MDXProvider>
+    <ThemeProvider>
+      <MDXProvider components={mdxComponents}>
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+      </MDXProvider>
+    </ThemeProvider>
   </React.StrictMode>,
 );

@@ -12,9 +12,17 @@
     min-height: 100vh;
     color: var(--text);
     background:
-      radial-gradient(circle at top, rgba(125, 95, 54, 0.2), transparent 30%),
-      linear-gradient(180deg, #0e0b09 0%, #15110e 52%, #100d0b 100%);
+      radial-gradient(circle at top, var(--page-radial), transparent 30%),
+      linear-gradient(
+        180deg,
+        var(--page-grad-start) 0%,
+        var(--page-grad-mid) 52%,
+        var(--page-grad-end) 100%
+      );
     font-family: "Manrope", sans-serif;
+    transition:
+      color 220ms ease,
+      background 320ms ease;
   }
 
   body::before {
@@ -22,8 +30,8 @@
     inset: 0;
     z-index: -2;
     background-image:
-      linear-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+      linear-gradient(var(--grid-line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
     background-size: 40px 40px;
     content: "";
     opacity: 0.3;
