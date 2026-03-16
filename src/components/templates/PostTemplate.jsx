@@ -7,7 +7,6 @@ import SiteHeaderBar from "../organisms/SiteHeaderBar";
 
 const postNavItems = [
   { label: "Arquivo", href: "/#artigos" },
-  { label: "Manifesto", href: "/#manifesto" },
 ];
 
 export default function PostTemplate({ post, nextPost }) {

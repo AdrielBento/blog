@@ -8,14 +8,28 @@
     font-size: 1.12rem;
   }
 
+  .article-body > p:first-of-type::first-letter,
+  .article-body .article-intro::first-letter {
+    float: left;
+    margin-right: 10px;
+    margin-top: 6px;
+    line-height: 0.86;
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(2.8rem, 5.2vw, 4.1rem);
+    font-weight: 600;
+    color: var(--accent);
+  }
+
   .article-body h2 {
     margin: 42px 0 14px;
     font-size: 2.4rem;
+    scroll-margin-top: 110px;
   }
 
   .article-body h3 {
     margin: 28px 0 12px;
     font-size: 1.8rem;
+    scroll-margin-top: 110px;
   }
 
   .article-body blockquote {

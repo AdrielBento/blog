@@ -376,6 +376,85 @@
     @apply pt-3;
   }
 
+  .article-main {
+    min-width: 0;
+  }
+
+  .article-toc {
+    @apply relative mt-5 border p-5;
+
+    border-color: var(--line);
+    background: linear-gradient(180deg, var(--card-bg-start), var(--card-bg-end));
+  }
+
+  .article-toc::before {
+    @apply pointer-events-none absolute inset-2 border;
+
+    border-color: var(--card-inner-border);
+    content: "";
+  }
+
+  .article-toc::after {
+    @apply pointer-events-none absolute inset-[6px];
+
+    background-color: var(--ornament-corner-color);
+    opacity: 0.78;
+    mask:
+      var(--ornament-corner-svg-soft-tl)
+        left top / var(--ornament-corner-size-soft) var(--ornament-corner-size-soft)
+        no-repeat,
+      var(--ornament-corner-svg-soft-tr)
+        right top / var(--ornament-corner-size-soft) var(--ornament-corner-size-soft)
+        no-repeat,
+      var(--ornament-corner-svg-soft-bl)
+        left bottom / var(--ornament-corner-size-soft) var(--ornament-corner-size-soft)
+        no-repeat,
+      var(--ornament-corner-svg-soft-br)
+        right bottom / var(--ornament-corner-size-soft) var(--ornament-corner-size-soft)
+        no-repeat;
+    content: "";
+  }
+
+  .article-toc__title,
+  .article-toc summary {
+    @apply relative m-0 text-[0.8rem] font-bold tracking-[0.12em] uppercase;
+
+    color: var(--accent);
+  }
+
+  .article-toc summary {
+    @apply cursor-pointer;
+  }
+
+  .article-toc__list {
+    @apply relative mt-3 grid gap-1.5;
+
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style: none;
+  }
+
+  .article-toc__list .is-child {
+    padding-left: 14px;
+  }
+
+  .article-toc__link {
+    @apply text-[0.9rem] leading-[1.5];
+
+    color: var(--text-soft);
+    transition: color 160ms ease;
+  }
+
+  .article-toc__link:hover,
+  .article-toc__link:focus-visible,
+  .article-toc__link.is-active {
+    color: var(--text);
+  }
+
+  .article-toc--mobile {
+    display: none;
+  }
+
   .back-link {
     @apply mb-[18px] inline-flex items-center gap-2;
 
@@ -486,6 +565,16 @@
 
     .hero__ornament {
       display: none;
+    }
+
+    .article-toc--desktop {
+      display: none;
+    }
+
+    .article-toc--mobile {
+      display: block;
+      margin-top: 0;
+      margin-bottom: 18px;
     }
 
     .comments-section__panel {

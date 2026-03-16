@@ -81,6 +81,8 @@ Principais componentes:
 - `.article-layout`, `.article-rail`, `.rail-card`
 - `.back-link`
 - `.article-body`
+- `.article-toc` (desktop)
+- `.article-toc--mobile` (accordion em mobile)
 - `.comments-section`
 - `.article-pagination`
 
@@ -88,8 +90,24 @@ Função:
 
 - reforçar contexto de leitura
 - controlar largura e hierarquia tipográfica
+- permitir navegação por seções do artigo (ToC com links âncora)
 - permitir discussão por post com autenticação GitHub (Giscus)
 - oferecer continuidade com próxima leitura
+
+## ToC no artigo
+
+Padrão atual:
+
+- gerado em runtime a partir de headings `h2` e `h3` do conteúdo MDX.
+- headings recebem `id` slugificado com garantia de unicidade.
+- desktop: ToC na `article-rail`.
+- mobile: ToC em `details/summary` acima do conteúdo.
+
+Comportamento:
+
+- links clicáveis por âncora com scroll suave.
+- seção ativa destacada durante scroll.
+- fallback: ToC não renderiza quando houver menos de 2 headings válidos.
 
 ## Conteúdo MDX
 
