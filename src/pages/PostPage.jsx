@@ -1,6 +1,6 @@
 import { Navigate, useParams } from "react-router-dom";
 import PostTemplate from "../components/templates/PostTemplate";
-import { posts, postsBySlug } from "../postsData";
+import { posts, postsBySlug } from "../lib/posts";
 
 export default function PostPage() {
   const { slug } = useParams();

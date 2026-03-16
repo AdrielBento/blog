@@ -1,0 +1,41 @@
+---
+title: "Modelos, memória operacional e responsabilidade"
+slug: "modelos-memoria-operacional"
+category: "IA"
+subtitle: "Assistentes generativos são componentes de sistema. Trate contexto, logs, limites e revisão humana com a mesma seriedade que trataria uma API."
+excerpt: "Um guia para tratar assistentes de IA como componentes de sistema: com contexto explícito, limites claros e observabilidade."
+date: "19 de fevereiro de 2026"
+readingTime: "9 min de leitura"
+author: "Helena Varella"
+---
+
+<p className="article-intro">
+  Integrar IA em produtos internos ou externos exige abandonar a fantasia do
+  assistente mágico. Modelos respondem ao contexto que recebem, variam com a
+  formulação do prompt e amplificam ambiguidades do domínio. Isso pede projeto de
+  sistema, não encantamento.
+</p>
+
+## Contexto precisa de desenho deliberado
+
+Um bom fluxo com IA define que dados entram, em que ordem, com qual permanência e com que critérios de expiração. Sem isso, a ferramenta devolve respostas verossímeis porém inconsistentes, difíceis de auditar e frágeis sob escala.
+
+## Memória operacional não é memória eterna
+
+Times prudentes separam claramente histórico de conversa, memória de sessão e conhecimento persistido. Misturar tudo em um mesmo bloco de contexto costuma gerar custo alto, latência pior e interpretações erradas do que realmente deve orientar a resposta.
+
+> Em IA aplicada, precisão nasce menos do prompt brilhante e mais do desenho honesto do contexto.
+
+## Observabilidade é parte do produto
+
+Se a equipe não consegue inspecionar entradas, versões de prompts, saídas e decisões humanas posteriores, ela não consegue melhorar o sistema. O loop operacional precisa registrar o suficiente para aprender sem violar privacidade ou compliance.
+
+### Um stack mínimo de governança inclui:
+
+- versionamento de prompts e instruções de sistema;
+- telemetria de custo, latência e taxa de intervenção humana;
+- regras explícitas para fallback e bloqueio de ações sensíveis.
+
+## Craftsmanship também vale para IA
+
+O melhor uso de IA em engenharia não elimina o cuidado artesanal; ele o redistribui. Menos tempo copiando boilerplate, mais tempo examinando contratos, modos de falha e qualidade do raciocínio colocado em produção.
