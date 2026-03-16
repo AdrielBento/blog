@@ -1,0 +1,11 @@
+@layer utilities {
+  .is-hidden {
+    display: none;
+  }
+
+  .atomic-separator {
+    height: 1px;
+    margin-inline: var(--gutter-wide);
+    background: var(--line);
+  }
+}

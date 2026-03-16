@@ -1,0 +1,22 @@
+@layer tokens {
+  :root {
+    --bg: #120f0d;
+    --bg-soft: #191513;
+    --panel: rgba(29, 23, 19, 0.88);
+    --panel-strong: rgba(20, 16, 14, 0.95);
+    --line: rgba(215, 194, 161, 0.24);
+    --line-strong: rgba(215, 194, 161, 0.5);
+    --text: #f1e7d5;
+    --text-soft: #c7baa4;
+    --accent: #d6b680;
+    --accent-deep: #7f6842;
+    --shadow: 0 24px 70px rgba(0, 0, 0, 0.35);
+    --gutter: clamp(20px, 4vw, 56px);
+    --gutter-wide: clamp(20px, 5vw, 72px);
+    --reading-width: 760px;
+    --hero-width: 880px;
+    --hero-image:
+      linear-gradient(rgba(12, 10, 8, 0.3), rgba(12, 10, 8, 0.88)),
+      url("../../assets/gustave-dore-illustration.jpg");
+  }
+}
