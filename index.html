@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atelier do Código | Ensaios sobre software, craft e IA</title>
+    <meta
+      name="description"
+      content="Blog editorial sobre engenharia de software, software craftsmanship e inteligência artificial."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="home-page">
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="site-header__bar">
+          <a class="brand" href="index.html">
+            <span class="brand__mark">A</span>
+            <span class="brand__text">
+              <strong>Atelier do Código</strong>
+              <span>engenharia, craft e IA</span>
+            </span>
+          </a>
+          <nav class="top-nav" aria-label="Navegação principal">
+            <a href="#artigos">Artigos</a>
+            <a href="#manifesto">Manifesto</a>
+          </nav>
+        </div>
+        <section class="hero">
+          <div class="hero__ornament hero__ornament--left" aria-hidden="true"></div>
+          <div class="hero__content">
+            <p class="eyebrow">Caderno editorial para equipes que constroem com rigor</p>
+            <h1>Onde arquitetura, ofício e modelos convivem sob a mesma lâmpada.</h1>
+            <p class="hero__lede">
+              Ensaios sobre disciplina técnica, qualidade deliberada e o impacto
+              operacional da inteligência artificial em produtos reais.
+            </p>
+            <div class="hero__meta">
+              <span><i data-lucide="scroll-text"></i> longform técnico</span>
+              <span><i data-lucide="library-big"></i> software craftsmanship</span>
+              <span><i data-lucide="sparkles"></i> IA aplicada com método</span>
+            </div>
+          </div>
+          <div class="hero__ornament hero__ornament--right" aria-hidden="true"></div>
+        </section>
+      </header>
+
+      <main>
+        <section class="intro-grid" id="manifesto">
+          <article class="manifesto-card">
+            <p class="section-kicker">Manifesto editorial</p>
+            <h2>Escrever software continua sendo um trabalho de julgamento.</h2>
+            <p>
+              Ferramentas mudam, frameworks evaporam e modelos generativos
+              aceleram a superfície do trabalho. Ainda assim, a diferença entre
+              código apenas funcional e software durável segue dependendo de
+              leitura atenta, decisões reversíveis e arquitetura com intenção.
+            </p>
+          </article>
+          <aside class="quote-card">
+            <p class="section-kicker">Marginalia</p>
+            <blockquote>
+              A pressa produz volume. O ofício produz clareza, coerência e espaço
+              para manutenção futura.
+            </blockquote>
+          </aside>
+        </section>
+
+        <section class="posts-section" id="artigos">
+          <div class="section-heading">
+            <div>
+              <p class="section-kicker">Arquivo</p>
+              <h2>Leituras recentes</h2>
+            </div>
+            <div class="filter-group" aria-label="Filtrar artigos">
+              <button class="filter-chip is-active" type="button" data-filter="all">
+                Todos
+              </button>
+              <button class="filter-chip" type="button" data-filter="Arquitetura">
+                Arquitetura
+              </button>
+              <button class="filter-chip" type="button" data-filter="Craftsmanship">
+                Craftsmanship
+              </button>
+              <button class="filter-chip" type="button" data-filter="IA">
+                IA
+              </button>
+            </div>
+          </div>
+
+          <div class="posts-grid">
+            <a
+              class="post-card"
+              href="posts/arquitetura-do-julgamento.html"
+              data-category="Arquitetura"
+            >
+              <p class="post-card__tag">Arquitetura</p>
+              <h3>A arquitetura do julgamento técnico</h3>
+              <p class="post-card__excerpt">
+                Como equipes maduras usam restrições, documentação curta e
+                decisões reversíveis para evitar sistemas vistosos e frágeis.
+              </p>
+              <div class="post-card__meta">
+                <span>2 de março de 2026</span>
+                <span>8 min de leitura</span>
+              </div>
+            </a>
+
+            <a
+              class="post-card"
+              href="posts/craftsmanship-interfaces.html"
+              data-category="Craftsmanship"
+            >
+              <p class="post-card__tag">Craftsmanship</p>
+              <h3>Interfaces que envelhecem com dignidade</h3>
+              <p class="post-card__excerpt">
+                O cuidado artesanal no frontend aparece menos em efeitos e mais
+                em ritmo, semântica, estados vazios e manutenção serena.
+              </p>
+              <div class="post-card__meta">
+                <span>27 de fevereiro de 2026</span>
+                <span>6 min de leitura</span>
+              </div>
+            </a>
+
+            <a
+              class="post-card"
+              href="posts/modelos-memoria-operacional.html"
+              data-category="IA"
+            >
+              <p class="post-card__tag">IA</p>
+              <h3>Modelos, memória operacional e responsabilidade</h3>
+              <p class="post-card__excerpt">
+                Um guia para tratar assistentes de IA como componentes de sistema:
+                com contexto explícito, limites claros e observabilidade.
+              </p>
+              <div class="post-card__meta">
+                <span>19 de fevereiro de 2026</span>
+                <span>9 min de leitura</span>
+              </div>
+            </a>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <p>Atelier do Código. Editorial para engenharia de software, craft e IA.</p>
+        <p>Ilustração de cabeçalho baseada em gravura de Gustave Doré, em domínio público.</p>
+      </footer>
+    </div>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

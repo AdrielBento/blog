@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Style Guide | Atelier do Código</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles.css" />
+    <style>
+      .style-guide-nav,
+      .swatch-grid,
+      .type-grid,
+      .showcase-grid,
+      .doc-links {
+        display: grid;
+        gap: 18px;
+      }
+
+      .style-guide-hero {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 56px var(--gutter-wide) 64px;
+        text-align: center;
+      }
+
+      .style-guide-section {
+        padding: 34px var(--gutter-wide) 0;
+      }
+
+      .style-guide-nav {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
+
+      .style-guide-nav a,
+      .swatch-card,
+      .type-card,
+      .sample-card,
+      .doc-links a {
+        position: relative;
+        padding: 24px;
+        border: 1px solid var(--line);
+        background: linear-gradient(180deg, rgba(31, 25, 21, 0.88), rgba(18, 15, 13, 0.92));
+      }
+
+      .style-guide-nav a::before,
+      .swatch-card::before,
+      .type-card::before,
+      .sample-card::before,
+      .doc-links a::before {
+        position: absolute;
+        inset: 8px;
+        border: 1px solid rgba(214, 182, 128, 0.08);
+        content: "";
+        pointer-events: none;
+      }
+
+      .swatch-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .swatch {
+        height: 84px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        margin-bottom: 14px;
+      }
+
+      .type-grid,
+      .showcase-grid,
+      .doc-links {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .sample-card .post-card,
+      .sample-card .rail-card,
+      .sample-card .filter-group {
+        margin-top: 14px;
+      }
+
+      .sample-card .post-card {
+        min-height: auto;
+      }
+
+      .guide-quote {
+        margin: 14px 0 0;
+        padding: 18px 24px;
+        border-left: 3px solid var(--accent);
+        background: rgba(214, 182, 128, 0.06);
+        font-family: "Cormorant Garamond", serif;
+        font-size: 1.6rem;
+        line-height: 1.45;
+      }
+
+      .doc-links a strong,
+      .style-guide-nav a strong {
+        display: block;
+        margin-bottom: 8px;
+        font-family: "Cormorant Garamond", serif;
+        font-size: 1.8rem;
+        line-height: 1;
+      }
+
+      .guide-footer {
+        padding: 40px var(--gutter-wide);
+      }
+
+      @media (max-width: 980px) {
+        .style-guide-nav,
+        .swatch-grid,
+        .type-grid,
+        .showcase-grid,
+        .doc-links {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 720px) {
+        .style-guide-hero,
+        .style-guide-section,
+        .guide-footer {
+          padding-inline: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body class="home-page">
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="site-header__bar">
+          <a class="brand" href="../index.html">
+            <span class="brand__mark">A</span>
+            <span class="brand__text">
+              <strong>Atelier do Código</strong>
+              <span>style guide editorial</span>
+            </span>
+          </a>
+          <nav class="top-nav" aria-label="Navegação principal">
+            <a href="../index.html">Site</a>
+            <a href="design-system.md">Docs</a>
+          </nav>
+        </div>
+        <section class="style-guide-hero">
+          <p class="eyebrow">Referência visual interna</p>
+          <h1>O design system em estado visível.</h1>
+          <p class="hero__lede">
+            Esta página reúne tokens, tipografia, superfícies, componentes e
+            diretrizes visuais para inspeção rápida durante a evolução do projeto.
+          </p>
+          <div class="hero__meta">
+            <span><i data-lucide="palette"></i> tokens</span>
+            <span><i data-lucide="type"></i> tipografia</span>
+            <span><i data-lucide="blocks"></i> componentes</span>
+          </div>
+        </section>
+      </header>
+
+      <main>
+        <section class="style-guide-section">
+          <div class="section-heading">
+            <div>
+              <p class="section-kicker">Mapa</p>
+              <h2>Áreas do guia</h2>
+            </div>
+          </div>
+          <div class="style-guide-nav">
+            <a href="#cores">
+              <strong>Tokens</strong>
+              <span>Cores, superfícies, ornamentos e contraste.</span>
+            </a>
+            <a href="#tipografia">
+              <strong>Tipografia</strong>
+              <span>Hierarquia editorial, famílias e escalas.</span>
+            </a>
+            <a href="#componentes">
+              <strong>Componentes</strong>
+              <span>Blocos principais da home e das páginas de artigo.</span>
+            </a>
+            <a href="#documentacao">
+              <strong>Documentos</strong>
+              <span>Entradas textuais do design system em `docs/`.</span>
+            </a>
+          </div>
+        </section>
+
+        <section class="style-guide-section" id="cores">
+          <div class="section-heading">
+            <div>
+              <p class="section-kicker">Tokens</p>
+              <h2>Paleta e superfícies</h2>
+            </div>
+          </div>
+          <div class="swatch-grid">
+            <article class="swatch-card">
+              <div class="swatch" style="background:#120f0d;"></div>
+              <p class="post-card__tag">Base</p>
+              <h3>#120f0d</h3>
+              <p class="post-card__excerpt">Fundo principal quente e denso.</p>
+            </article>
+            <article class="swatch-card">
+              <div class="swatch" style="background:#191513;"></div>
+              <p class="post-card__tag">Surface</p>
+              <h3>#191513</h3>
+              <p class="post-card__excerpt">Superfícies secundárias e variações de painel.</p>
+            </article>
+            <article class="swatch-card">
+              <div class="swatch" style="background:#d6b680;"></div>
+              <p class="post-card__tag">Accent</p>
+              <h3>#d6b680</h3>
+              <p class="post-card__excerpt">Destaque dourado para labels e estados ativos.</p>
+            </article>
+            <article class="swatch-card">
+              <div class="swatch" style="background:#f1e7d5;"></div>
+              <p class="post-card__tag">Text</p>
+              <h3>#f1e7d5</h3>
+              <p class="post-card__excerpt">Texto principal com contraste alto.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="style-guide-section" id="tipografia">
+          <div class="section-heading">
+            <div>
+              <p class="section-kicker">Type</p>
+              <h2>Hierarquia tipográfica</h2>
+            </div>
+          </div>
+          <div class="type-grid">
+            <article class="type-card">
+              <p class="eyebrow">Display</p>
+              <h1 style="margin:0;font-size:clamp(2.4rem,5vw,4rem);">Onde o ofício ganha forma.</h1>
+              <p class="post-card__excerpt">Cormorant Garamond para abertura editorial.</p>
+            </article>
+            <article class="type-card">
+              <p class="section-kicker">Section title</p>
+              <h2 style="margin:0 0 12px;font-size:2.4rem;">Títulos com cadência e gravidade</h2>
+              <p class="post-card__excerpt">Subseções e chamadas seguem a mesma lógica serifada.</p>
+            </article>
+            <article class="type-card">
+              <p class="section-kicker">Body copy</p>
+              <p class="post-card__excerpt">
+                O corpo usa Manrope para manter fluidez de leitura, clareza de interface
+                e separação explícita entre texto funcional e texto editorial.
+              </p>
+              <p class="guide-quote">Precisão visual também é uma forma de legibilidade.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="style-guide-section" id="componentes">
+          <div class="section-heading">
+            <div>
+              <p class="section-kicker">Components</p>
+              <h2>Amostras de interface</h2>
+            </div>
+          </div>
+          <div class="showcase-grid">
+            <article class="sample-card">
+              <p class="section-kicker">Filtro</p>
+              <h3 style="margin:0;">Chips editoriais</h3>
+              <div class="filter-group">
+                <button class="filter-chip is-active" type="button">Todos</button>
+                <button class="filter-chip" type="button">Arquitetura</button>
+                <button class="filter-chip" type="button">IA</button>
+              </div>
+            </article>
+            <article class="sample-card">
+              <p class="section-kicker">Card</p>
+              <h3 style="margin:0;">Resumo de post</h3>
+              <a class="post-card" href="../posts/arquitetura-do-julgamento.html">
+                <p class="post-card__tag">Arquitetura</p>
+                <h3>A arquitetura do julgamento técnico</h3>
+                <p class="post-card__excerpt">
+                  Restrições claras, reversibilidade e clareza operacional como
+                  fundamento de sistemas duráveis.
+                </p>
+                <div class="post-card__meta">
+                  <span>2 de março de 2026</span>
+                  <span>8 min</span>
+                </div>
+              </a>
+            </article>
+            <article class="sample-card">
+              <p class="section-kicker">Rail</p>
+              <h3 style="margin:0;">Apoio lateral</h3>
+              <div class="rail-card">
+                <p class="section-kicker">Foco</p>
+                <p>Contexto, síntese e navegação de retorno para páginas de artigo.</p>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="style-guide-section" id="documentacao">
+          <div class="section-heading">
+            <div>
+              <p class="section-kicker">Docs</p>
+              <h2>Referências escritas</h2>
+            </div>
+          </div>
+          <div class="doc-links">
+            <a href="tokens.md">
+              <strong>Tokens</strong>
+              <span>Cores, tipografia, espaçamento, superfícies e motion.</span>
+            </a>
+            <a href="components.md">
+              <strong>Components</strong>
+              <span>Estrutura, comportamento e checklist para evolução dos blocos de UI.</span>
+            </a>
+            <a href="content-guidelines.md">
+              <strong>Content</strong>
+              <span>Tom editorial, estrutura de artigos e regras de linguagem.</span>
+            </a>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer guide-footer">
+        <p>Guia visual interno do Atelier do Código.</p>
+        <p>A implementação base continua centralizada em `styles.css` e nas páginas editoriais.</p>
+      </footer>
+    </div>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="../script.js"></script>
+  </body>
+</html>

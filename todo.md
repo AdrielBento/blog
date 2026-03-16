@@ -1,0 +1,3 @@
+ - Transformar o site em Next.js/Vite com rotas e componentes reutilizáveis.
+ - Adicionar paginação, busca e taxonomias reais de posts.
+ - Integrar um CMS ou arquivos Markdown para editar o conteúdo sem mexer no HTML.

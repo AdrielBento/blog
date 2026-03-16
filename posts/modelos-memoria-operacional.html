@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modelos, memória operacional e responsabilidade | Atelier do Código</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body class="post-page">
+    <div class="page-shell">
+      <header class="site-header site-header--article">
+        <div class="site-header__bar">
+          <a class="brand" href="../index.html">
+            <span class="brand__mark">A</span>
+            <span class="brand__text">
+              <strong>Atelier do Código</strong>
+              <span>engenharia, craft e IA</span>
+            </span>
+          </a>
+          <nav class="top-nav" aria-label="Navegação principal">
+            <a href="../index.html#artigos">Arquivo</a>
+            <a href="../index.html#manifesto">Manifesto</a>
+          </nav>
+        </div>
+        <section class="article-hero">
+          <p class="eyebrow">IA</p>
+          <h1>Modelos, memória operacional e responsabilidade</h1>
+          <p class="article-hero__subtitle">
+            Assistentes generativos são componentes de sistema. Trate contexto,
+            logs, limites e revisão humana com a mesma seriedade que trataria uma API.
+          </p>
+          <div class="article-hero__meta">
+            <span>por Helena Varella</span>
+            <span>19 de fevereiro de 2026</span>
+            <span>9 min de leitura</span>
+          </div>
+        </section>
+      </header>
+
+      <main class="article-layout">
+        <aside class="article-rail">
+          <a class="back-link" href="../index.html"><i data-lucide="arrow-left"></i> Voltar ao arquivo</a>
+          <div class="rail-card">
+            <p class="section-kicker">Foco</p>
+            <p>Memória operacional, limites de contexto, revisão humana e observabilidade.</p>
+          </div>
+        </aside>
+
+        <article class="article-body">
+          <p class="article-intro">
+            Integrar IA em produtos internos ou externos exige abandonar a fantasia
+            do “assistente mágico”. Modelos respondem ao contexto que recebem,
+            variam com a formulação do prompt e amplificam ambiguidades do domínio.
+            Isso pede projeto de sistema, não encantamento.
+          </p>
+
+          <h2>Contexto precisa de desenho deliberado</h2>
+          <p>
+            Um bom fluxo com IA define que dados entram, em que ordem, com qual
+            permanência e com que critérios de expiração. Sem isso, a ferramenta
+            devolve respostas verossímeis porém inconsistentes, difíceis de
+            auditar e frágeis sob escala.
+          </p>
+
+          <h2>Memória operacional não é memória eterna</h2>
+          <p>
+            Times prudentes separam claramente histórico de conversa, memória de
+            sessão e conhecimento persistido. Misturar tudo em um mesmo bloco de
+            contexto costuma gerar custo alto, latência pior e interpretações
+            erradas do que realmente deve orientar a resposta.
+          </p>
+
+          <blockquote>
+            Em IA aplicada, precisão nasce menos do prompt brilhante e mais do
+            desenho honesto do contexto.
+          </blockquote>
+
+          <h2>Observabilidade é parte do produto</h2>
+          <p>
+            Se a equipe não consegue inspecionar entradas, versões de prompts,
+            saídas e decisões humanas posteriores, ela não consegue melhorar o
+            sistema. O loop operacional precisa registrar o suficiente para
+            aprender sem violar privacidade ou compliance.
+          </p>
+
+          <h3>Um stack mínimo de governança inclui:</h3>
+          <ul>
+            <li>versionamento de prompts e instruções de sistema;</li>
+            <li>telemetria de custo, latência e taxa de intervenção humana;</li>
+            <li>regras explícitas para fallback e bloqueio de ações sensíveis.</li>
+          </ul>
+
+          <h2>Craftsmanship também vale para IA</h2>
+          <p>
+            O melhor uso de IA em engenharia não elimina o cuidado artesanal; ele
+            o redistribui. Menos tempo copiando boilerplate, mais tempo
+            examinando contratos, modos de falha e qualidade do raciocínio que
+            será colocado em produção.
+          </p>
+        </article>
+      </main>
+
+      <nav class="article-pagination" aria-label="Voltar ao arquivo">
+        <a href="../index.html#artigos">
+          <span class="section-kicker">Retornar</span>
+          <strong>Explorar o arquivo completo</strong>
+        </a>
+      </nav>
+    </div>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="../script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A arquitetura do julgamento técnico | Atelier do Código</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body class="post-page">
+    <div class="page-shell">
+      <header class="site-header site-header--article">
+        <div class="site-header__bar">
+          <a class="brand" href="../index.html">
+            <span class="brand__mark">A</span>
+            <span class="brand__text">
+              <strong>Atelier do Código</strong>
+              <span>engenharia, craft e IA</span>
+            </span>
+          </a>
+          <nav class="top-nav" aria-label="Navegação principal">
+            <a href="../index.html#artigos">Arquivo</a>
+            <a href="../index.html#manifesto">Manifesto</a>
+          </nav>
+        </div>
+        <section class="article-hero">
+          <p class="eyebrow">Arquitetura</p>
+          <h1>A arquitetura do julgamento técnico</h1>
+          <p class="article-hero__subtitle">
+            Sistemas duráveis não surgem de decisões grandiosas, mas da disciplina
+            de escolher o que merece complexidade.
+          </p>
+          <div class="article-hero__meta">
+            <span>por Helena Varella</span>
+            <span>2 de março de 2026</span>
+            <span>8 min de leitura</span>
+          </div>
+        </section>
+      </header>
+
+      <main class="article-layout">
+        <aside class="article-rail">
+          <a class="back-link" href="../index.html"><i data-lucide="arrow-left"></i> Voltar ao arquivo</a>
+          <div class="rail-card">
+            <p class="section-kicker">Foco</p>
+            <p>Arquitetura orientada a restrições, clareza operacional e reversibilidade.</p>
+          </div>
+        </aside>
+
+        <article class="article-body">
+          <p class="article-intro">
+            Há times que confundem arquitetura com ornamentação. Acumulam camadas,
+            padrões e abstrações como quem protege o sistema de um futuro
+            hipotético. O resultado, em geral, é um software que impressiona na
+            apresentação e falha na fricção cotidiana.
+          </p>
+
+          <h2>Complexidade é um orçamento, não uma virtude</h2>
+          <p>
+            Toda decisão arquitetural deveria começar com uma pergunta simples:
+            qual risco real estamos comprando ao introduzir esta camada? O melhor
+            código de infraestrutura que uma equipe pode manter é sempre o mínimo
+            necessário para sustentar os fluxos críticos, não o conjunto mais
+            elegante de conceitos.
+          </p>
+          <p>
+            Restrições claras ajudam. Um limite explícito de dependências por
+            módulo, a exigência de contratos visíveis entre serviços e a recusa a
+            abstrações sem caso concreto reduzem o ruído e elevam a qualidade das
+            conversas técnicas.
+          </p>
+
+          <blockquote>
+            Arquitetura madura não exibe poder. Ela reduz a superfície do erro.
+          </blockquote>
+
+          <h2>Documentação curta, mas situada</h2>
+          <p>
+            Diagramas gigantes raramente sobrevivem à terceira sprint. Em vez
+            deles, prefira registros de decisão breves, com contexto, escolha,
+            consequências e gatilhos de revisão. Esse formato preserva a memória
+            institucional sem empurrar o time para uma arqueologia permanente.
+          </p>
+
+          <h3>Uma decisão técnica útil costuma registrar:</h3>
+          <ul>
+            <li>qual problema concreto motivou a mudança;</li>
+            <li>quais opções foram descartadas e por quê;</li>
+            <li>o que precisa acontecer para revisitar a decisão.</li>
+          </ul>
+
+          <h2>Reversibilidade como critério de desenho</h2>
+          <p>
+            Quando duas soluções parecem equivalentes, escolha a que permite
+            desfazer o movimento com menor custo. Esse princípio vale para filas,
+            particionamento de serviços, desenho de schema e adoção de IA em
+            pipelines internos. A velocidade real de um time depende menos de
+            acertar sempre e mais de errar sem trauma.
+          </p>
+
+          <h2>O papel da IA no julgamento</h2>
+          <p>
+            Ferramentas generativas já escrevem trechos plausíveis de código,
+            documentação e testes. O ponto decisivo continua sendo o julgamento do
+            time: validar se a solução proposta respeita domínio, limites de
+            operação, custo de manutenção e segurança. IA acelera produção; não
+            substitui discernimento arquitetural.
+          </p>
+        </article>
+      </main>
+
+      <nav class="article-pagination" aria-label="Próximo artigo">
+        <a href="craftsmanship-interfaces.html">
+          <span class="section-kicker">Próxima leitura</span>
+          <strong>Interfaces que envelhecem com dignidade</strong>
+        </a>
+      </nav>
+    </div>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="../script.js"></script>
+  </body>
+</html>
