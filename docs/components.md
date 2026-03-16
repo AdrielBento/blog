@@ -81,12 +81,14 @@ Principais componentes:
 - `.article-layout`, `.article-rail`, `.rail-card`
 - `.back-link`
 - `.article-body`
+- `.comments-section`
 - `.article-pagination`
 
 Função:
 
 - reforçar contexto de leitura
 - controlar largura e hierarquia tipográfica
+- permitir discussão por post com autenticação GitHub (Giscus)
 - oferecer continuidade com próxima leitura
 
 ## Conteúdo MDX

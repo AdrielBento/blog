@@ -411,6 +411,72 @@
     @apply block text-[2rem];
   }
 
+  .comments-section {
+    @apply px-[var(--gutter-wide)] pb-8;
+  }
+
+  .comments-section__panel {
+    @apply relative border p-7;
+
+    max-width: var(--reading-width);
+    margin-left: auto;
+    border-color: var(--line);
+    background: linear-gradient(180deg, var(--card-bg-start), var(--card-bg-end));
+  }
+
+  .comments-section__panel::before {
+    @apply pointer-events-none absolute inset-2 border;
+
+    border-color: var(--card-inner-border);
+    content: "";
+  }
+
+  .comments-section__panel::after {
+    @apply pointer-events-none absolute inset-[6px];
+
+    background-color: var(--ornament-corner-color);
+    opacity: 0.86;
+    mask:
+      var(--ornament-corner-svg-tl)
+        left top / var(--ornament-corner-size) var(--ornament-corner-size)
+        no-repeat,
+      var(--ornament-corner-svg-tr)
+        right top / var(--ornament-corner-size) var(--ornament-corner-size)
+        no-repeat,
+      var(--ornament-corner-svg-bl)
+        left bottom / var(--ornament-corner-size) var(--ornament-corner-size)
+        no-repeat,
+      var(--ornament-corner-svg-br)
+        right bottom / var(--ornament-corner-size) var(--ornament-corner-size)
+        no-repeat;
+    content: "";
+  }
+
+  .comments-section__head h2 {
+    @apply m-0 text-[2.1rem] leading-[0.95] tracking-[-0.015em];
+
+    font-family: "Cormorant Garamond", serif;
+  }
+
+  .comments-section__head p,
+  .comments-section__status {
+    @apply mt-2 leading-[1.75];
+
+    color: var(--text-soft);
+  }
+
+  .comments-section__status a {
+    color: var(--accent);
+  }
+
+  .comments-section__embed {
+    @apply mt-5 min-h-[180px];
+  }
+
+  .comments-section__embed .giscus {
+    width: 100%;
+  }
+
   @media (max-width: 980px) {
     .hero {
       @apply px-7;
@@ -420,6 +486,10 @@
 
     .hero__ornament {
       display: none;
+    }
+
+    .comments-section__panel {
+      margin-left: 0;
     }
   }
 
@@ -451,7 +521,8 @@
     .quote-card,
     .post-card,
     .rail-card,
-    .article-pagination a {
+    .article-pagination a,
+    .comments-section__panel {
       @apply p-[22px];
     }
   }
