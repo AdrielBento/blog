@@ -30,6 +30,8 @@ O design system do projeto cobre:
 
 A implementação continua concentrada principalmente em:
 
+- [src/styles/app.css](/home/adriel/documents/code-craft/src/styles/app.css)
+- [src/styles/tailwind.css](/home/adriel/documents/code-craft/src/styles/tailwind.css)
 - [src/styles/tokens.css](/home/adriel/documents/code-craft/src/styles/tokens.css)
 - [src/styles/base.css](/home/adriel/documents/code-craft/src/styles/base.css)
 - [src/styles/layout.css](/home/adriel/documents/code-craft/src/styles/layout.css)
@@ -40,6 +42,60 @@ A implementação continua concentrada principalmente em:
 - [index.html](/home/adriel/documents/code-craft/index.html)
 - [src/components/templates/HomeTemplate.jsx](/home/adriel/documents/code-craft/src/components/templates/HomeTemplate.jsx)
 - [src/components/templates/PostTemplate.jsx](/home/adriel/documents/code-craft/src/components/templates/PostTemplate.jsx)
+
+## Stack de estilos
+
+- Tailwind CSS v4 está instalado via plugin oficial do Vite.
+- O entrypoint de estilos do app é [src/styles/app.css](/home/adriel/documents/code-craft/src/styles/app.css), com ordem:
+1. Tailwind (`theme.css` + `utilities.css`)
+2. camadas semânticas atuais (`tokens`, `base`, `layout`, `components`, `prose`, `utilities`)
+- Preflight do Tailwind está desabilitado nesta fase para evitar regressões no layout editorial.
+- As cores e temas continuam canônicos em CSS variables (`:root` e `:root[data-theme="light"]`).
+
+## Política de autoria
+
+- Estratégia atual: classes semânticas + Tailwind `@apply` gradual.
+- Não migrar componentes em massa para utilitários inline.
+- Primeiro alvo de adoção: elementos de baixo risco visual (navegação, filtros, toggle).
+- Hero, tipografia de artigo, code highlight e Mermaid permanecem sob as camadas semânticas existentes.
+
+## Roadmap Tailwind
+
+1. Base instalada (concluída)
+- plugin Vite ativo, entrypoint `app.css`, Preflight desabilitado.
+- convivência entre Tailwind utilities e camadas semânticas estabilizada.
+
+2. Migração completa de `components.css` (onda atual)
+- converter regras elegíveis de layout/spacing/typography para `@apply`.
+- preservar identidade visual, tokens semânticos e seletores existentes.
+- evitar mudanças de markup React e evitar redesign.
+
+3. Revisão de Preflight (fase futura)
+- avaliar habilitação somente após estabilização da onda de `components.css`.
+- decidir com base em regressões, quantidade de overrides globais e custo de manutenção.
+
+## Critérios de autoria
+
+- Usar classe semântica + `@apply` quando houver:
+- reutilização em múltiplos componentes;
+- estado/variante mais complexo;
+- importância de linguagem visual do design system.
+- Usar utility inline no JSX apenas para ajuste local, único e sem impacto de tema.
+- Não usar utility inline para identidade visual central:
+- hero e ornamentos;
+- cards editoriais;
+- tipografia/prosa de artigo e bloco MDX.
+
+## Gate para Preflight
+
+- Pré-condição: `components.css` estabilizado sem regressões relevantes.
+- Checklist de validação:
+- smoke visual completo em home e post;
+- desktop e mobile;
+- dark e light mode;
+- sem quebra de hierarquia tipográfica e ritmo editorial.
+- Critério de aprovação:
+- habilitar Preflight apenas se não exigir volume alto de overrides globais.
 
 ## Uso recomendado
 

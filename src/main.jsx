@@ -5,7 +5,7 @@ import { MDXProvider } from "@mdx-js/react";
 import App from "./App";
 import { mdxComponents } from "./lib/mdxComponents";
 import { ThemeProvider } from "./lib/theme";
-import "./styles/index.css";
+import "./styles/app.css";
 
 createRoot(document.getElementById("root")).render(
   <React.StrictMode>

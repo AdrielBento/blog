@@ -10,6 +10,12 @@ O projeto agora possui dois temas oficiais:
 
 O tema é controlado por `data-theme` no elemento `html`.
 
+## Integração com Tailwind
+
+- Tailwind v4 foi adicionado para utilitários e `@apply`.
+- O Tailwind não é a fonte da paleta: os tokens continuam definidos em [src/styles/tokens.css](/home/adriel/documents/code-craft/src/styles/tokens.css).
+- Utilities e `@apply` devem sempre consumir variáveis semânticas (`var(--*)`) para manter dark/light consistentes.
+
 ## Modelo de tema
 
 1. Tokens semânticos (`--text`, `--line`, `--panel`, etc.) não devem ser usados com valores hardcoded nos componentes.

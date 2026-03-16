@@ -1,4 +1,5 @@
 import { defineConfig } from "vite";
+import tailwindcss from "@tailwindcss/vite";
 import react from "@vitejs/plugin-react";
 import mdx from "@mdx-js/rollup";
 import remarkGfm from "remark-gfm";
@@ -28,6 +29,7 @@ mdxPlugin.enforce = "pre";
 
 export default defineConfig({
   plugins: [
+    tailwindcss(),
     mdxPlugin,
     react({
       include: /\.(mdx|js|jsx|ts|tsx)$/,

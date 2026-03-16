@@ -8,7 +8,7 @@ export default function ThemeToggle() {
   return (
     <button
       type="button"
-      className="theme-toggle"
+      className="theme-toggle select-none"
       onClick={toggleTheme}
       aria-label={`Alternar para modo ${isDark ? "claro" : "escuro"}`}
       title={`Alternar para modo ${isDark ? "claro" : "escuro"}`}

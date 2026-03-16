@@ -3,6 +3,20 @@ module.exports = {
   plugins: ["stylelint-order"],
   rules: {
     "alpha-value-notation": null,
+    "at-rule-no-unknown": [
+      true,
+      {
+        ignoreAtRules: [
+          "source",
+          "theme",
+          "utility",
+          "variant",
+          "custom-variant",
+          "apply",
+          "reference",
+        ],
+      },
+    ],
     "color-function-alias-notation": null,
     "color-function-notation": null,
     "font-family-name-quotes": null,
