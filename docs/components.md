@@ -2,7 +2,15 @@
 
 ## Visão geral
 
-Os componentes do projeto seguem uma lógica editorial: blocos densos, boa hierarquia, ornamentos sutis e comportamento previsível. A nomenclatura usa padrão próximo de BEM.
+O projeto usa React com organização Atomic Design e mantém classes semânticas como contrato principal de UI.  
+O estilo é aplicado por camadas (`tokens`, `base`, `layout`, `components`, `prose`, `utilities`) com Tailwind v4 como suporte para utilitários e `@apply`.
+
+## Referências de implementação
+
+- [src/components/templates/HomeTemplate.jsx](/home/adriel/documents/code-craft/src/components/templates/HomeTemplate.jsx)
+- [src/components/templates/PostTemplate.jsx](/home/adriel/documents/code-craft/src/components/templates/PostTemplate.jsx)
+- [src/styles/components.css](/home/adriel/documents/code-craft/src/styles/components.css)
+- [src/styles/prose.css](/home/adriel/documents/code-craft/src/styles/prose.css)
 
 ## Convenções de naming
 
@@ -17,269 +25,121 @@ Modificadores e estados:
 
 - `.site-header--article`
 - `.filter-chip.is-active`
-- `.is-hidden`
+- `.filter-chip[data-state="on"]`
 
-## Header global
+## Header e navegação
 
-Referências:
+Principais componentes:
 
-- [index.html](/home/adriel/documents/code-craft/index.html)
-- [posts/arquitetura-do-julgamento.html](/home/adriel/documents/code-craft/posts/arquitetura-do-julgamento.html)
+- `.brand`, `.brand__mark`, `.brand__text`
+- `.top-nav`, `.top-nav__list`
+- `.theme-toggle`
 
-Estrutura:
+Função:
 
-- `.brand`
-- `.brand__mark`
-- `.brand__text`
-- `.top-nav`
+- assinatura visual do produto
+- navegação curta entre seções
+- troca de tema dark/light persistida
 
-Responsabilidade:
+## Home editorial
 
-- assinatura do produto
-- consistência entre páginas
-- navegação curta e orientada ao editorial
+Principais componentes:
 
-## Hero da home
-
-Componentes:
-
-- `.hero`
-- `.hero__content`
-- `.hero__ornament`
-- `.hero__meta`
-
-Conteúdo esperado:
-
-- eyebrow
-- título principal
-- lede
-- metadata com ícones
-
-Regras:
-
-- a imagem é sempre background
-- o título é o principal eixo visual
-- os ornamentos não devem competir com o texto
-
-## Manifesto card
-
-Componente:
-
+- `.hero`, `.hero__content`, `.hero__ornament`, `.hero__meta`
 - `.manifesto-card`
-
-Função:
-
-- abrir o conteúdo da home com posicionamento editorial
-
-## Quote card
-
-Componente:
-
 - `.quote-card`
-
-Função:
-
-- pausa visual
-- reforço de tom contemplativo
-
-## Section heading
-
-Componente:
-
 - `.section-heading`
+- `.filter-group`, `.filter-chip`
+- `.posts-grid`, `.post-card`
 
 Função:
 
-- organizar a entrada da listagem
-- alinhar heading e ações de filtro
+- estabelecer narrativa editorial
+- orientar descoberta de posts por categoria
+- manter ritmo visual e legibilidade
 
-## Filter chips
+## Página de artigo
 
-Componente:
+Principais componentes:
 
-- `.filter-chip`
-
-Comportamento:
-
-- default com fundo transparente
-- ativo com `--accent`
-- filtragem client-side via [script.js](/home/adriel/documents/code-craft/script.js)
-
-Regras:
-
-- labels curtos
-- sempre legíveis
-- sem motion exagerado
-
-## Post card
-
-Componente:
-
-- `.post-card`
-
-Subpartes:
-
-- `.post-card__tag`
-- `.post-card__excerpt`
-- `.post-card__meta`
-
-Conteúdo mínimo:
-
-- categoria
-- título
-- resumo
-- data
-- tempo de leitura
-
-Estados:
-
-- default
-- hover/focus com elevação
-- oculto com `.is-hidden`
-
-## Hero de artigo
-
-Componente:
-
-- `.article-hero`
-- `.article-hero__subtitle`
-- `.article-hero__meta`
-
-Conteúdo:
-
-- categoria
-- título
-- subtítulo
-- autor
-- data
-- tempo de leitura
-
-## Layout de artigo
-
-Componente:
-
-- `.article-layout`
-
-Estrutura:
-
-- rail lateral fixa no fluxo do layout
-- corpo principal com largura máxima controlada
-
-## Rail lateral
-
-Componentes:
-
-- `.article-rail`
+- `.article-hero`, `.article-hero__subtitle`, `.article-hero__meta`
+- `.article-layout`, `.article-rail`, `.rail-card`
 - `.back-link`
-- `.rail-card`
-
-Função:
-
-- navegação de retorno
-- apoio contextual
-- reforço de foco do artigo
-
-## Corpo do artigo
-
-Componente:
-
 - `.article-body`
-
-Elementos previstos:
-
-- parágrafos
-- `h2`
-- `h3`
-- `blockquote`
-- `ul`
-
-Regras:
-
-- largura máxima de leitura
-- espaçamento vertical generoso
-- blockquote com destaque sem quebrar a sobriedade
-
-## Paginação editorial
-
-Componente:
-
 - `.article-pagination`
 
 Função:
 
-- continuidade entre leituras
-- fechamento editorial do texto
+- reforçar contexto de leitura
+- controlar largura e hierarquia tipográfica
+- oferecer continuidade com próxima leitura
 
-## Footer
+## Conteúdo MDX
 
-Componente:
+A prosa e elementos de conteúdo são tratados em `prose.css`:
 
-- `.site-footer`
-
-Função:
-
-- assinatura de produto
-- crédito contextual da imagem principal
-
-## Ícones
-
-Biblioteca:
-
-- Lucide via CDN
-
-Uso atual:
-
-- `scroll-text`
-- `library-big`
-- `sparkles`
-- `arrow-left`
+- `h2`, `h3`, parágrafos e listas
+- `blockquote`
+- code blocks (`rehype-pretty-code`)
+- Mermaid
 
 Regras:
 
-- traço simples
-- baixo volume
-- suporte ao texto, não substituição
+- largura de leitura controlada
+- contraste preservado nos dois temas
+- componentes de conteúdo não devem romper a linguagem editorial
+
+## Ícones
+
+Biblioteca usada:
+
+- `lucide-react`
+
+Regras:
+
+- ícone sempre como suporte ao texto
+- evitar excesso de ícones na mesma área
+- manter traço e tamanho consistentes
 
 ## Interações
 
-### Implementadas
+Implementadas:
 
-- hover/focus em navegação
-- hover/focus em cards
-- alternância de estado em chips
+- hover/focus em navegação e links
+- hover/focus em cards editoriais
+- estado ativo de filtros por categoria
+- toggle de tema
 
-### Regras futuras
+Diretrizes:
 
-1. Toda nova interação precisa ter benefício funcional claro.
-2. Animação deve ser curta e sóbria.
+1. Toda interação deve ter objetivo funcional.
+2. Animações devem ser curtas e discretas.
 3. Foco visível não pode ser removido.
-4. Ornamento nunca deve parecer componente clicável.
 
-## Responsividade por componente
+## Responsividade
 
-### Header e hero
+Padrões principais:
 
-- navegação colapsa verticalmente em telas menores
-- ornamentos do hero desaparecem em larguras reduzidas
+- `<= 980px`: grids colapsam para coluna única e hero simplifica ornamentos.
+- `<= 720px`: header passa a fluxo vertical e espaçamentos são reduzidos.
 
-### Grids
+Objetivo:
 
-- `.intro-grid`
-- `.posts-grid`
-- `.article-layout`
+- preservar leitura e hierarquia visual em desktop e mobile.
 
-Todos colapsam para uma coluna em telas menores.
+## Regras de autoria de estilo
 
-### Cards
-
-- padding reduzido no mobile
-- metadata entra em fluxo vertical quando necessário
+- Padrão: classe semântica + `@apply`.
+- Utility inline no JSX: apenas ajuste local, único e sem impacto de tema.
+- Não usar utility inline para identidade visual central:
+- hero e ornamentos
+- cards editoriais
+- prosa de artigo/MDX
 
 ## Checklist para novos componentes
 
-1. Reusa tokens existentes?
-2. Mantém o clima dark academia?
-3. Preserva legibilidade em mobile?
-4. Tem contraste suficiente?
-5. Respeita o padrão de borda, superfície e hierarquia?
-6. Não introduz visual lúdico ou genérico de dashboard?
+1. Reusa tokens semânticos existentes?
+2. Mantém dark academia e legibilidade?
+3. Funciona em dark e light mode?
+4. Responde bem em mobile?
+5. Respeita padrão de superfície/borda/hierarquia?

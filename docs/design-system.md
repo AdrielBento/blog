@@ -70,9 +70,10 @@ A implementação continua concentrada principalmente em:
 - preservar identidade visual, tokens semânticos e seletores existentes.
 - evitar mudanças de markup React e evitar redesign.
 
-3. Revisão de Preflight (fase futura)
-- avaliar habilitação somente após estabilização da onda de `components.css`.
-- decidir com base em regressões, quantidade de overrides globais e custo de manutenção.
+3. Revisão de Preflight (executada em 16 de março de 2026)
+- avaliação feita após estabilização da onda de `components.css`.
+- decisão tomada com base em regressões reais e custo de overrides globais.
+- status atual: Preflight segue desabilitado.
 
 ## Critérios de autoria
 
@@ -96,6 +97,20 @@ A implementação continua concentrada principalmente em:
 - sem quebra de hierarquia tipográfica e ritmo editorial.
 - Critério de aprovação:
 - habilitar Preflight apenas se não exigir volume alto de overrides globais.
+
+## Revisão de Preflight (16 de março de 2026)
+
+Resultado do experimento com Preflight temporariamente habilitado:
+
+- regressão em tipografia de artigo: margens de `p` e `h2` zeradas em runtime;
+- regressão em listas do conteúdo MDX: `list-style: none` e `padding-left: 0`;
+- impacto direto no ritmo editorial e na legibilidade.
+
+Decisão:
+
+- manter Preflight desabilitado;
+- preservar reset/base custom já existente nas camadas semânticas;
+- reavaliar somente se houver estratégia explícita de overrides globais para conteúdo editorial.
 
 ## Uso recomendado
 
