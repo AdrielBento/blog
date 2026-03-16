@@ -58,6 +58,21 @@ Função:
 - orientar descoberta de posts por categoria
 - manter ritmo visual e legibilidade
 
+## Ornamentos de canto (SVG)
+
+Padrão oficial:
+
+- containers editoriais e botões usam ornamentos de canto via SVG em pseudo-elementos.
+- o desenho ornamental é tokenizado em `tokens.css` (`--ornament-corner-svg` e `--ornament-corner-svg-soft`).
+- cor e contraste dos ornamentos são controlados por tokens de tema (`--ornament-corner-color` e `--ornament-corner-color-soft`).
+- a linguagem visual dos cantos é curvilínea, com inspiração vitoriana e variações por orientação (`tl`, `tr`, `bl`, `br`).
+
+Diretrizes:
+
+- manter realce sutil apenas por opacidade/contraste em `hover` e `focus-visible`.
+- evitar ornamentação animada para não competir com conteúdo de leitura.
+- glifos decorativos Unicode (ex.: `❦`) não são padrão base por variação entre fontes e plataformas.
+
 ## Página de artigo
 
 Principais componentes:

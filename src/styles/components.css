@@ -198,6 +198,31 @@
     content: "";
   }
 
+  .manifesto-card::after,
+  .quote-card::after,
+  .post-card::after,
+  .rail-card::after,
+  .article-pagination a::after {
+    @apply pointer-events-none absolute inset-[6px];
+
+    background-color: var(--ornament-corner-color);
+    opacity: 0.86;
+    mask:
+      var(--ornament-corner-svg-tl)
+        left top / var(--ornament-corner-size) var(--ornament-corner-size)
+        no-repeat,
+      var(--ornament-corner-svg-tr)
+        right top / var(--ornament-corner-size) var(--ornament-corner-size)
+        no-repeat,
+      var(--ornament-corner-svg-bl)
+        left bottom / var(--ornament-corner-size) var(--ornament-corner-size)
+        no-repeat,
+      var(--ornament-corner-svg-br)
+        right bottom / var(--ornament-corner-size) var(--ornament-corner-size)
+        no-repeat;
+    content: "";
+  }
+
   .manifesto-card h2,
   .section-heading h2 {
     @apply mb-4;
@@ -233,11 +258,34 @@
   }
 
   .filter-chip {
-    @apply cursor-pointer border bg-transparent px-[14px] py-2.5 tracking-[0.1em] uppercase;
+    @apply relative cursor-pointer overflow-hidden border bg-transparent px-[14px] py-2.5 tracking-[0.1em] uppercase;
 
     border-color: var(--line);
     color: var(--text-soft);
     font: inherit;
+  }
+
+  .filter-chip::before,
+  .theme-toggle::before {
+    @apply pointer-events-none absolute inset-[3px];
+
+    background-color: var(--ornament-corner-color-soft);
+    opacity: 0.72;
+    mask:
+      var(--ornament-corner-svg-soft-tl)
+        left top / var(--ornament-corner-size-soft) var(--ornament-corner-size-soft)
+        no-repeat,
+      var(--ornament-corner-svg-soft-tr)
+        right top / var(--ornament-corner-size-soft) var(--ornament-corner-size-soft)
+        no-repeat,
+      var(--ornament-corner-svg-soft-bl)
+        left bottom / var(--ornament-corner-size-soft) var(--ornament-corner-size-soft)
+        no-repeat,
+      var(--ornament-corner-svg-soft-br)
+        right bottom / var(--ornament-corner-size-soft) var(--ornament-corner-size-soft)
+        no-repeat;
+    transition: opacity 180ms ease;
+    content: "";
   }
 
   .filter-chip.is-active,
@@ -245,6 +293,19 @@
     color: var(--bg);
     background: var(--accent);
     border-color: var(--accent);
+  }
+
+  .filter-chip.is-active::before,
+  .filter-chip[data-state="on"]::before {
+    background-color: var(--bg);
+    opacity: 0.36;
+  }
+
+  .filter-chip:hover::before,
+  .filter-chip:focus-visible::before,
+  .theme-toggle:hover::before,
+  .theme-toggle:focus-visible::before {
+    opacity: 1;
   }
 
   .post-card {
@@ -324,7 +385,7 @@
   }
 
   .theme-toggle {
-    @apply inline-flex cursor-pointer items-center gap-2 border px-3 py-2 text-[0.78rem] tracking-[0.08em] uppercase whitespace-nowrap;
+    @apply relative inline-flex cursor-pointer items-center gap-2 overflow-hidden border px-3 py-2 text-[0.78rem] tracking-[0.08em] uppercase whitespace-nowrap;
 
     border-color: var(--line);
     background: var(--panel);
