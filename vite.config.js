@@ -19,8 +19,8 @@ const mdxPlugin = mdx({
     [remarkMdxFrontmatter, { name: "frontmatter" }],
   ],
   rehypePlugins: [
+    [rehypeMermaid, { strategy: "pre-mermaid" }],
     [rehypePrettyCode, prettyCodeOptions],
-    [rehypeMermaid, { strategy: "inline-svg", mermaidConfig: { theme: "dark" } }],
   ],
 });
 

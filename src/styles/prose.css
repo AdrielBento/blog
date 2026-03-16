@@ -91,4 +91,15 @@
     background: rgba(17, 14, 12, 0.62);
     border-radius: 6px;
   }
+
+  .article-body pre.mermaid {
+    width: 100%;
+    max-width: 100%;
+    margin: 28px 0;
+    padding: 12px;
+    border: 1px solid rgba(214, 182, 128, 0.22);
+    background: rgba(17, 14, 12, 0.62);
+    border-radius: 6px;
+    overflow-x: auto;
+  }
 }
