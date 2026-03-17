@@ -351,8 +351,9 @@
         var(--header-overlay-article-start),
         var(--header-overlay-article-end)
       ),
-      var(--hero-image);
+      var(--post-hero-image, var(--hero-image));
     background-position: center top;
+    background-size: cover;
   }
 
   .article-hero {
@@ -600,10 +601,6 @@
     .hero,
     .article-hero {
       @apply px-5 pt-10 pb-12;
-    }
-
-    .theme-toggle__label {
-      @apply hidden;
     }
 
     .manifesto-card,

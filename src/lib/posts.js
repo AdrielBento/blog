@@ -9,6 +9,7 @@ const frontmatterSchema = z.object({
   author: z.string().min(1),
   category: z.string().min(1),
   subtitle: z.string().min(1),
+  heroImage: z.string().trim().min(1).optional(),
 });
 
 const MONTHS_PT_BR = {

@@ -7,6 +7,7 @@ excerpt: "Resumo curto para card da listagem."
 date: "16 de março de 2026"
 readingTime: "7 min de leitura"
 author: "Seu Nome"
+heroImage: "https://images.unsplash.com/photo-1578426187376-19bd5aeaeaa0?auto=format&fit=crop&w=1600&q=80"
 ---
 
 {/* 
@@ -46,6 +47,7 @@ Texto normal com **negrito**, *itálico* e `inline code`.
 | categoria | Arquitetura | Use as categorias já existentes quando possível |
 | readingTime | 7 min de leitura | Texto livre, padrão editorial atual |
 | date | 16 de março de 2026 | Formato PT-BR suportado pelo parser |
+| heroImage | https://... | Opcional. URL da imagem de hero do post |
 
 ## Task list (GFM)
 
@@ -67,6 +69,7 @@ type PostMeta = {
   date: string;
   readingTime: string;
   author: string;
+  heroImage?: string;
 };
 ```
 

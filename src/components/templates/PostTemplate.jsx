@@ -10,9 +10,13 @@ const postNavItems = [
 ];
 
 export default function PostTemplate({ post, nextPost }) {
+  const headerStyle = post.heroImage
+    ? { "--post-hero-image": `url("${post.heroImage}")` }
+    : undefined;
+
   return (
     <div className="page-shell">
-      <header className="site-header site-header--article">
+      <header className="site-header site-header--article" style={headerStyle}>
         <SiteHeaderBar items={postNavItems} />
         <PostHero post={post} />
       </header>

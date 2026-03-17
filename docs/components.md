@@ -65,7 +65,7 @@ Padrão oficial:
 - containers editoriais e botões usam ornamentos de canto via SVG em pseudo-elementos.
 - o desenho ornamental é tokenizado em `tokens.css` (`--ornament-corner-svg` e `--ornament-corner-svg-soft`).
 - cor e contraste dos ornamentos são controlados por tokens de tema (`--ornament-corner-color` e `--ornament-corner-color-soft`).
-- a linguagem visual dos cantos é curvilínea, com inspiração vitoriana e variações por orientação (`tl`, `tr`, `bl`, `br`).
+- a linguagem visual dos cantos é floral, curvilínea e barroca, com inspiração vitoriana e variações por orientação (`tl`, `tr`, `bl`, `br`).
 
 Diretrizes:
 
@@ -93,6 +93,12 @@ Função:
 - permitir navegação por seções do artigo (ToC com links âncora)
 - permitir discussão por post com autenticação GitHub (Giscus)
 - oferecer continuidade com próxima leitura
+
+Imagem de hero por post:
+
+- o header da página de artigo aceita `heroImage` no frontmatter MDX.
+- quando `heroImage` existe, ela substitui o background padrão no `site-header--article`.
+- quando não existe, o projeto mantém a imagem editorial padrão global.
 
 ## ToC no artigo
 
