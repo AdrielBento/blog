@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">Editorial article plate</title>
+  <desc id="desc">An engraved article card with folio lines, paper framing and dense ornamental center.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#16110e" />
+      <stop offset="50%" stop-color="#241a15" />
+      <stop offset="100%" stop-color="#0f0c0a" />
+    </linearGradient>
+    <radialGradient id="paper" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#d6b680" stop-opacity="0.26" />
+      <stop offset="100%" stop-color="#d6b680" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="900" fill="url(#bg)" />
+  <rect x="42" y="42" width="1116" height="816" fill="none" stroke="#d6b680" stroke-opacity="0.22" stroke-width="2" />
+  <rect x="82" y="82" width="1036" height="736" fill="none" stroke="#d6b680" stroke-opacity="0.12" stroke-width="1.5" />
+  <rect x="160" y="142" width="880" height="616" rx="14" fill="url(#paper)" stroke="#d6b680" stroke-opacity="0.22" />
+  <g stroke="#f1e7d5" stroke-opacity="0.82" fill="none">
+    <path d="M266 226h668" stroke-width="5" />
+    <path d="M266 286h668" stroke-width="2" stroke-opacity="0.48" />
+    <path d="M266 338h668" stroke-width="2" stroke-opacity="0.48" />
+    <path d="M266 390h668" stroke-width="2" stroke-opacity="0.48" />
+    <path d="M266 442h434" stroke-width="2" stroke-opacity="0.48" />
+  </g>
+  <g transform="translate(600 562)" fill="none">
+    <circle r="118" stroke="#d6b680" stroke-opacity="0.3" stroke-width="2.5" />
+    <circle r="90" stroke="#d6b680" stroke-opacity="0.18" stroke-width="1.5" />
+    <path d="M-130 0c44 0 72-31 72-72c0-34-20-57-52-68" stroke="#d6b680" stroke-opacity="0.62" stroke-width="4" stroke-linecap="round" />
+    <path d="M130 0c-44 0-72-31-72-72c0-34 20-57 52-68" stroke="#d6b680" stroke-opacity="0.62" stroke-width="4" stroke-linecap="round" />
+    <path d="M-88 24c24-10 40-28 48-54c10 24 26 42 48 54c-22 12-38 30-48 56c-8-26-24-44-48-56Z" fill="#f1e7d5" fill-opacity="0.82" stroke="#d6b680" stroke-opacity="0.36" />
+    <circle cx="0" cy="0" r="9" fill="#d6b680" fill-opacity="0.78" />
+  </g>
+  <g fill="#f1e7d5" fill-opacity="0.92" font-family="Georgia, 'Times New Roman', serif" text-anchor="middle">
+    <text x="600" y="162" font-size="30" letter-spacing="8" fill="#d6b680" fill-opacity="0.8">ANNOTATED FOLIO</text>
+    <text x="600" y="688" font-size="76" letter-spacing="4">Articles</text>
+    <text x="600" y="738" font-size="26" letter-spacing="7" fill="#d6b680" fill-opacity="0.82">ESSAYS • NOTES • FIELD REPORTS</text>
+  </g>
+</svg>

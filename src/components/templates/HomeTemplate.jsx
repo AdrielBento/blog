@@ -6,6 +6,7 @@ import SiteHeaderBar from "../organisms/SiteHeaderBar";
 
 const homeNavItems = [
   { label: "Articles", href: "#artigos" },
+  { label: "Biblioteca", href: "/biblioteca" },
 ];
 
 export default function HomeTemplate({

@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">Editorial paper plate</title>
+  <desc id="desc">A research paper cover with observatory lines, formal rules and a radial focal ornament.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#12100d" />
+      <stop offset="54%" stop-color="#211813" />
+      <stop offset="100%" stop-color="#0d0a09" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="900" fill="url(#bg)" />
+  <rect x="40" y="40" width="1120" height="820" fill="none" stroke="#d6b680" stroke-opacity="0.22" stroke-width="2" />
+  <rect x="94" y="94" width="1012" height="712" fill="none" stroke="#d6b680" stroke-opacity="0.14" stroke-width="1.5" />
+  <g stroke="#d6b680" stroke-opacity="0.22" fill="none">
+    <path d="M160 224h880" stroke-width="2" />
+    <path d="M160 694h880" stroke-width="2" />
+    <path d="M232 224v470" stroke-width="1.5" />
+    <path d="M968 224v470" stroke-width="1.5" />
+  </g>
+  <g transform="translate(600 460)">
+    <circle r="212" fill="none" stroke="#d6b680" stroke-opacity="0.18" stroke-width="2" />
+    <circle r="154" fill="none" stroke="#d6b680" stroke-opacity="0.14" stroke-width="1.5" />
+    <circle r="106" fill="none" stroke="#f1e7d5" stroke-opacity="0.18" stroke-width="1.5" />
+    <path d="M-178 0h356M0-178v356" stroke="#d6b680" stroke-opacity="0.16" stroke-width="1.5" />
+    <path d="M-72-88h144v176h-144z" fill="none" stroke="#f1e7d5" stroke-opacity="0.72" stroke-width="4" />
+    <path d="M-42-58h84M-42-18h84M-42 22h84" stroke="#f1e7d5" stroke-opacity="0.52" stroke-width="3" />
+    <circle cx="0" cy="88" r="10" fill="#d6b680" fill-opacity="0.78" />
+  </g>
+  <g fill="#f1e7d5" fill-opacity="0.92" font-family="Georgia, 'Times New Roman', serif" text-anchor="middle">
+    <text x="600" y="186" font-size="28" letter-spacing="8" fill="#d6b680" fill-opacity="0.8">RESEARCH DOSSIER</text>
+    <text x="600" y="732" font-size="76" letter-spacing="4">Papers</text>
+    <text x="600" y="780" font-size="24" letter-spacing="7" fill="#d6b680" fill-opacity="0.8">MODELS • SYSTEMS • FOUNDATIONS</text>
+  </g>
+</svg>

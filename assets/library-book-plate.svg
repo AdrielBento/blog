@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">Editorial book plate</title>
+  <desc id="desc">An engraved Victorian-inspired cover plate with shelves, medallions and ornate borders.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#1c1511" />
+      <stop offset="52%" stop-color="#261c16" />
+      <stop offset="100%" stop-color="#100d0b" />
+    </linearGradient>
+    <linearGradient id="glow" x1="0%" x2="0%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#d6b680" stop-opacity="0.48" />
+      <stop offset="100%" stop-color="#d6b680" stop-opacity="0" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="900" fill="url(#bg)" />
+  <rect x="30" y="30" width="1140" height="840" fill="none" rx="20" stroke="#d6b680" stroke-opacity="0.25" stroke-width="2" />
+  <rect x="56" y="56" width="1088" height="788" fill="none" rx="16" stroke="#d6b680" stroke-opacity="0.14" stroke-width="1.5" />
+  <path d="M120 160h960" fill="none" stroke="#d6b680" stroke-opacity="0.24" stroke-width="2" />
+  <path d="M120 742h960" fill="none" stroke="#d6b680" stroke-opacity="0.24" stroke-width="2" />
+  <path d="M160 126c44 0 78 35 78 79c0 16-5 31-14 44c32-10 66-16 102-16c36 0 71 6 103 16c-9-13-14-28-14-44c0-44 34-79 78-79" fill="none" stroke="#d6b680" stroke-opacity="0.32" stroke-width="3" />
+  <path d="M1040 126c-44 0-78 35-78 79c0 16 5 31 14 44c-32-10-66-16-102-16c-36 0-71 6-103 16c9-13 14-28 14-44c0-44-34-79-78-79" fill="none" stroke="#d6b680" stroke-opacity="0.32" stroke-width="3" />
+  <g fill="none" stroke="#d6b680" stroke-opacity="0.22">
+    <path d="M212 222c0 96-58 144-58 226s58 129 58 216" stroke-width="3" />
+    <path d="M988 222c0 96 58 144 58 226s-58 129-58 216" stroke-width="3" />
+    <path d="M278 214v470" stroke-width="1.5" />
+    <path d="M922 214v470" stroke-width="1.5" />
+  </g>
+  <g transform="translate(600 452)">
+    <circle r="188" fill="none" stroke="#d6b680" stroke-opacity="0.26" stroke-width="2.5" />
+    <circle r="164" fill="none" stroke="#d6b680" stroke-opacity="0.15" stroke-width="1.5" />
+    <circle r="128" fill="url(#glow)" />
+    <path d="M-70-54h140v108h-140z" fill="none" stroke="#f1e7d5" stroke-opacity="0.82" stroke-width="7" />
+    <path d="M-52-42h40v84h-40zM12-42h40v84H12z" fill="none" stroke="#f1e7d5" stroke-opacity="0.62" stroke-width="5" />
+    <path d="M-92 76c18-22 42-34 71-34s53 12 71 34" fill="none" stroke="#d6b680" stroke-opacity="0.72" stroke-width="4" stroke-linecap="round" />
+    <circle cx="-116" cy="84" r="6" fill="#d6b680" fill-opacity="0.75" />
+    <circle cx="116" cy="84" r="6" fill="#d6b680" fill-opacity="0.75" />
+  </g>
+  <g fill="#f1e7d5" fill-opacity="0.9" font-family="Georgia, 'Times New Roman', serif" text-anchor="middle">
+    <text x="600" y="250" font-size="34" letter-spacing="9">CURATED SHELF</text>
+    <text x="600" y="670" font-size="78" letter-spacing="3">Books</text>
+    <text x="600" y="726" font-size="28" letter-spacing="7" fill="#d6b680" fill-opacity="0.82">CRAFT • ARCHITECTURE • SYSTEMS</text>
+  </g>
+  <g fill="#d6b680" fill-opacity="0.82">
+    <circle cx="120" cy="160" r="5" />
+    <circle cx="1080" cy="160" r="5" />
+    <circle cx="120" cy="742" r="5" />
+    <circle cx="1080" cy="742" r="5" />
+  </g>
+</svg>

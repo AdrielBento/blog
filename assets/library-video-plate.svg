@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">Editorial video plate</title>
+  <desc id="desc">A cinematic preview card with a projection arch, play medallion and theater-style ornamental frame.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#18120f" />
+      <stop offset="48%" stop-color="#261b15" />
+      <stop offset="100%" stop-color="#100c0a" />
+    </linearGradient>
+    <radialGradient id="beam" cx="50%" cy="38%" r="55%">
+      <stop offset="0%" stop-color="#d6b680" stop-opacity="0.32" />
+      <stop offset="100%" stop-color="#d6b680" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="900" fill="url(#bg)" />
+  <rect width="1200" height="900" fill="url(#beam)" />
+  <rect x="44" y="44" width="1112" height="812" fill="none" stroke="#d6b680" stroke-opacity="0.22" stroke-width="2" />
+  <rect x="92" y="92" width="1016" height="716" fill="none" stroke="#d6b680" stroke-opacity="0.12" stroke-width="1.5" />
+  <path d="M214 680c0-216 174-390 386-390s386 174 386 390" fill="none" stroke="#d6b680" stroke-opacity="0.26" stroke-width="3" />
+  <path d="M280 680c0-180 144-326 320-326s320 146 320 326" fill="none" stroke="#d6b680" stroke-opacity="0.18" stroke-width="1.5" />
+  <g transform="translate(600 448)">
+    <circle r="132" fill="none" stroke="#f1e7d5" stroke-opacity="0.24" stroke-width="1.5" />
+    <circle r="86" fill="none" stroke="#d6b680" stroke-opacity="0.3" stroke-width="2.5" />
+    <circle r="74" fill="#120f0d" fill-opacity="0.68" stroke="#d6b680" stroke-opacity="0.55" stroke-width="3" />
+    <path d="M-18-28l56 30l-56 30z" fill="#f1e7d5" fill-opacity="0.86" />
+  </g>
+  <g fill="#f1e7d5" fill-opacity="0.92" font-family="Georgia, 'Times New Roman', serif" text-anchor="middle">
+    <text x="600" y="170" font-size="28" letter-spacing="8" fill="#d6b680" fill-opacity="0.8">SCREENING ROOM</text>
+    <text x="600" y="728" font-size="76" letter-spacing="4">Videos</text>
+    <text x="600" y="778" font-size="24" letter-spacing="7" fill="#d6b680" fill-opacity="0.82">LECTURES • TALKS • DEMONSTRATIONS</text>
+  </g>
+</svg>
