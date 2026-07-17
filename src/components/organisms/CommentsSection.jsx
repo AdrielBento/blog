@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { useTheme } from "../../lib/theme";
 
 function resolveGiscusTheme(theme) {
-  return theme === "light" ? "light" : "dark_dimmed";
+  return theme === "light" ? "gruvbox" : "gruvbox_dark";
 }
 
 export default function CommentsSection({ postSlug, postTitle }) {
