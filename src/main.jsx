@@ -11,7 +11,7 @@ createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <ThemeProvider>
       <MDXProvider components={mdxComponents}>
-        <BrowserRouter>
+        <BrowserRouter basename={import.meta.env.BASE_URL}>
           <App />
         </BrowserRouter>
       </MDXProvider>

@@ -28,6 +28,7 @@ const mdxPlugin = mdx({
 mdxPlugin.enforce = "pre";
 
 export default defineConfig({
+  base: "/blog/",
   plugins: [
     tailwindcss(),
     mdxPlugin,
