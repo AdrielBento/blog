@@ -24,7 +24,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-version: 24
           cache: npm
 
       - name: Install dependencies
@@ -32,6 +32,13 @@ jobs:
 
       - name: Build
         run: npm run build
+        env:
+          VITE_GISCUS_REPO: ${{ secrets.VITE_GISCUS_REPO }}
+          VITE_GISCUS_REPO_ID: ${{ secrets.VITE_GISCUS_REPO_ID }}
+          VITE_GISCUS_CATEGORY: ${{ secrets.VITE_GISCUS_CATEGORY }}
+          VITE_GISCUS_CATEGORY_ID: ${{ secrets.VITE_GISCUS_CATEGORY_ID }}
+          VITE_GISCUS_MAPPING: ${{ secrets.VITE_GISCUS_MAPPING }}
+          VITE_GISCUS_LANG: ${{ secrets.VITE_GISCUS_LANG }}
 
       - name: Add SPA fallback
         run: cp dist/index.html dist/404.html
