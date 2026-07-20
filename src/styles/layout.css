@@ -132,6 +132,16 @@
     padding: 38px var(--gutter-wide) 0;
   }
 
+  .comments-section {
+    display: grid;
+    grid-template-columns: minmax(220px, 280px) minmax(0, 1fr);
+    gap: 40px;
+  }
+
+  .comments-section__panel {
+    grid-column: 2;
+  }
+
   .article-pagination {
     padding-bottom: 40px;
   }
@@ -154,8 +164,13 @@
     .library-curation,
     .posts-grid,
     .article-layout,
+    .comments-section,
     .site-footer {
       grid-template-columns: 1fr;
+    }
+
+    .comments-section__panel {
+      grid-column: 1;
     }
 
     .article-pagination a {
@@ -177,6 +192,7 @@
     .posts-section,
     .site-footer,
     .article-layout,
+    .comments-section,
     .article-pagination {
       width: 100%;
       padding-inline: 20px;

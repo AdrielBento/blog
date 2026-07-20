@@ -719,8 +719,7 @@
   .comments-section__panel {
     @apply relative border p-7;
 
-    max-width: var(--reading-width);
-    margin-left: auto;
+    max-width: 100%;
     border-color: var(--line);
     background: linear-gradient(180deg, var(--card-bg-start), var(--card-bg-end));
   }

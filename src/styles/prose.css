@@ -1,6 +1,6 @@
 @layer prose {
   .article-body {
-    max-width: var(--reading-width);
+    max-width: 100%;
     padding-bottom: 32px;
   }
 
